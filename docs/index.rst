@@ -19,6 +19,7 @@ Welcome to Tianshou!
 * :class:`~tianshou.policy.TD3Policy` `Twin Delayed DDPG <https://arxiv.org/pdf/1802.09477.pdf>`_
 * :class:`~tianshou.policy.SACPolicy` `Soft Actor-Critic <https://arxiv.org/pdf/1812.05905.pdf>`_
 * :class:`~tianshou.policy.DiscreteSACPolicy` `Discrete Soft Actor-Critic <https://arxiv.org/pdf/1910.07207.pdf>`_
+* :class:`~tianshou.policy.PSRLPolicy` `Posterior Sampling Reinforcement Learning <https://www.ece.uvic.ca/~bctill/papers/learning/Strens_2000.pdf>`_
 * :class:`~tianshou.policy.ImitationPolicy` Imitation Learning
 * :class:`~tianshou.data.PrioritizedReplayBuffer` `Prioritized Experience Replay <https://arxiv.org/pdf/1511.05952.pdf>`_
 * :meth:`~tianshou.policy.BasePolicy.compute_episodic_return` `Generalized Advantage Estimator <https://arxiv.org/pdf/1506.02438.pdf>`_
@@ -40,29 +41,25 @@ Here is Tianshou's other features:
 Installation
 ------------
 
-Tianshou is currently hosted on `PyPI <https://pypi.org/project/tianshou/>`_. You can simply install Tianshou with the following command (with Python >= 3.6):
+Tianshou is currently hosted on `PyPI <https://pypi.org/project/tianshou/>`_ and `conda-forge <https://github.com/conda-forge/tianshou-feedstock>`_. It requires Python >= 3.6.
+
+You can simply install Tianshou from PyPI with the following command:
 
 .. code-block:: bash
 
     $ pip install tianshou
+
+If you use Anaconda or Miniconda, you can install Tianshou from conda-forge through the following command:
+
+.. code-block:: bash
+
+    $ conda -c conda-forge install tianshou
 
 You can also install with the newest version through GitHub:
 
 .. code-block:: bash
 
-    # latest version
-    $ pip install git+https://github.com/thu-ml/tianshou.git@master
-
-If you use Anaconda or Miniconda, you can install Tianshou through the following command lines:
-
-.. code-block:: bash
-
-    # create a new virtualenv and install pip, change the env name if you like
-    $ conda create -n myenv pip
-    # activate the environment
-    $ conda activate myenv
-    # install tianshou
-    $ pip install tianshou
+    $ pip install git+https://github.com/thu-ml/tianshou.git@master --upgrade
 
 After installation, open your python console and type
 ::
