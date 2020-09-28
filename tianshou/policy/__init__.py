@@ -11,7 +11,6 @@ from tianshou.policy.modelfree.sac import SACPolicy
 from tianshou.policy.modelfree.discrete_sac import DiscreteSACPolicy
 from tianshou.policy.modelbase.psrl import PSRLPolicy
 from tianshou.policy.multiagent.mapolicy import MultiAgentPolicyManager
-from tianshou.policy.psrl.psrl import PSRLPolicy
 
 
 __all__ = [
